@@ -57,18 +57,33 @@
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="cep">CEP</label>
-      <input name="cep" id="cep" class="campo__escrita" />
-      <div id="erro"></div>
+      <input name="cep" id="cep" class="campo__escrita" ngModel required #cep="ngModel" pattern="^(\d{5})(-?\d{3})$" minlength="8" maxlength="9" (blur)="consultaCEP($event,f)" validadorCep/>
+      <div *ngIf="(cep?.invalid && cep?.touched) || cep?.dirty">
+         <mensagem *ngIf="cep?.errors?.['required']" mensagem="O campo de CEP é obrigatório"></mensagem>
+         <mensagem *ngIf="cep?.errors?.['pattern']" mensagem="O campo de CEP deve seguir este exemplo: 00000-000"></mensagem>
+         <mensagem *ngIf="cep?.errors?.['validadorCep']" mensagem="O CEP informado não existe."></mensagem>
+
+      </div>
     </div>
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="endereco">Endereço</label>
-      <input name="endereco" id="endereco" class="campo__escrita" />
+      <input name="endereco" id="endereco" class="campo__escrita" ngModel #endereco="ngModel" required />
+      <div *ngIf="(endereco?.invalid && endereco?.touched) || endereco?.dirty">
+        <mensagem *ngIf="endereco?.errors?.['required']"
+          mensagem="O campo de endereço é obrigatório."
+        ></mensagem>
+      </div>
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="numero">Numero</label>
-        <input name="numero" id="numero" class="campo__escrita" />
+        <input name="numero" id="numero" class="campo__escrita" ngModel required #numero="ngModel"/>
+        <div *ngIf="(numero?.invalid && numero?.touched) || numero?.dirty">
+          <mensagem *ngIf="numero?.errors?.['required']"
+            mensagem="O campo de numero é obrigatório."
+          ></mensagem>
+        </div>
       </div>
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="complemento">Complemento</label>

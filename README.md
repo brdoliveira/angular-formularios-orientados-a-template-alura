@@ -1,27 +1,14 @@
-# FormsReativos
+﻿# Angular: formulários orientados a templates
+ 
+Um formulários orientados a templates é a maneira mais simples de construir um formulário em Angular. Ele usa a diretiva de vinculação de dados bidirecional do Angular (ngModel) para criar e gerenciar a instância de formulário subjacente. Além disso, como o nome sugere, um formulários orientados a templates é conduzido principalmente pelo componente de exibição. Esses projetos foI desenvolvido na formação: <a href="https://cursos.alura.com.br/course/angular-formularios-orientados-templates">"Angular: formulários orientados a templates"</a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## O que foi aprendido?
+- Criação de formulários orientado a template
+- FormsModule e suas diretivas
+- Criação de validações padrões
+- Criação de diretivas validadoras
+- Implemente validação assincrona com uso de API
 
-## Development server
+<h2>🧐 Autor</h2>
+<a href="https://github.com/brdoliveira" title="Github"><b>Bruno Ribeiro</b> ⚓</a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
